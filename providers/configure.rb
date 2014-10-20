@@ -72,12 +72,13 @@ action :config do
     action :delete
     only_if { ::File.exists?("/etc/init/diamond.conf") }
   end
+
   runit_service new_resource.runit_name do
     run_template_name "diamond"
     cookbook new_resource.cookbook
     default_logger true
     options({
-              :prefix => new_resource.prefix
+              :diamond_binary => new_resource.diamond_binary
             })
   end
   new_resource.updated_by_last_action(true)

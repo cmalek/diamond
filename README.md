@@ -125,6 +125,12 @@ Attribute Parameters:
     <td><tt><code>diamond</code></tt></td>
   </tr>
   <tr>
+    <td>diamond_binary></td>
+    <td>String</td>
+    <td>The path to the diamond executable</td>
+    <td><tt><code>/opt/diamond/bin/diamond</code></tt></td>
+  </tr>
+  <tr>
     <td>diamond_configuration_source></td>
     <td>String</td>
     <td>Name of the ERB Template used to generate diamond.conf</td>
